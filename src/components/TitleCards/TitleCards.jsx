@@ -241,10 +241,10 @@ const TitleCards = ({ title, category }) => {
 
   return (
     <div className="titleCards mt-[10px] mb-[30px]">
-      <h2 className="mb-[8px] text-white text-2xl font-bold">
+      <h2 className="mb-[8px] text-white text-lg sm:text-2xl font-bold">
         {title ? title : category || "Popular on Netflix"}
       </h2>
-      <div className="card_list flex flex-row gap-[10px] overflow-x-scroll scrollbar-hide">
+      <div className="card_list flex flex-row gap-[6px] sm:gap-[10px] overflow-x-scroll scrollbar-hide">
         {movies
           .filter(
             (movie) =>
@@ -266,9 +266,9 @@ const TitleCards = ({ title, category }) => {
               <img
                 src={movie.Poster}
                 alt={movie.Title}
-                className="w-[240px] h-[200px] object-cover rounded-[4px] cursor-pointer"
+                className="w-[120px] h-[100px] sm:w-[180px] sm:h-[150px] md:w-[240px] md:h-[200px] object-cover rounded-[4px] cursor-pointer transition-transform hover:scale-105"
               />
-              <p className="text-white absolute bottom-[10px] right-[10px] font-semibold">
+              <p className="text-white text-[10px] sm:text-[12px] md:text-[14px] absolute bottom-[5px] sm:bottom-[10px] right-[5px] sm:right-[10px] font-semibold bg-black/70 px-1 sm:px-2 py-0.5 sm:py-1 rounded max-w-[110px] sm:max-w-[170px] md:max-w-[230px] truncate">
                 {movie.Title}
               </p>
             </div>

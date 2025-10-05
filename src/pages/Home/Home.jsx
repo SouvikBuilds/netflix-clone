@@ -11,44 +11,46 @@ const Home = () => {
   return (
     <div className="home">
       <Navbar />
-      <div className="hero relative ">
+      <div className="hero relative">
         <img
           src={hero_banner}
           alt="Not Found"
           className="banner-img w-full [mask-image:linear-gradient(to_right,transparent,black_75%)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_75%)]"
         />
 
-        <div className="heroCaption absolute w-full pl-[6%] bottom-0">
+        <div className="heroCaption absolute w-full px-[4%] sm:pl-[6%] bottom-0">
           <img
             src={hero_title}
             alt="not found"
-            className="caption-img w-[90%] max-w-[420px] mb-[30px]"
+            className="caption-img w-[70%] sm:w-[90%] max-w-[280px] sm:max-w-[420px] mb-[20px] sm:mb-[30px]"
           />
-          <p className="caption-text text-white max-w-[700px] text-[17px] mb-[20px]">
-            Discovering his ties to a secret ancient order,a young man living in
-            modern Istambul embarks on a quest to save the city from an immortal
-            enemy
+          <p className="caption-text text-white max-w-[700px] text-[14px] sm:text-[17px] mb-[15px] sm:mb-[20px] hidden sm:block">
+            Discovering his ties to a secret ancient order, a young man living
+            in modern Istambul embarks on a quest to save the city from an
+            immortal enemy
           </p>
-          <div className="hero-btns flex gap-[10px] mb-[50px] ">
+          <div className="hero-btns flex gap-[8px] sm:gap-[10px] mb-[30px] sm:mb-[50px]">
             <button
               type="button"
-              className="flex items-center justify-center gap-2 px-8 py-3 bg-white text-black text-base font-semibold rounded-lg hover:bg-[#ffffffbf] transition-all duration-200 cursor-pointer h-[40px]"
+              className="flex items-center justify-center gap-1 sm:gap-2 px-4 sm:px-8 py-2 sm:py-3 bg-white text-black text-[14px] sm:text-base font-semibold rounded-lg hover:bg-[#ffffffbf] transition-all duration-200 cursor-pointer h-[36px] sm:h-[40px]"
             >
-              <img src={play_icon} alt="" className="w-5 h-5" />
+              <img src={play_icon} alt="" className="w-4 h-4 sm:w-5 sm:h-5" />
               Play
             </button>
 
             <button
               type="button"
-              className="btn dark-btn flex items-center justify-center gap-2 px-8 py-3 bg-[#6d6d6eb3] hover:bg-[#6d6d6e66] text-white text-base font-semibold rounded-lg  transition-all duration-200 cursor-pointer h-[40px]"
+              className="btn dark-btn flex items-center justify-center gap-1 sm:gap-2 px-4 sm:px-8 py-2 sm:py-3 bg-[#6d6d6eb3] hover:bg-[#6d6d6e66] text-white text-[14px] sm:text-base font-semibold rounded-lg transition-all duration-200 cursor-pointer h-[36px] sm:h-[40px]"
             >
-              <img src={info_icon} alt="" className="w-5 h-5 " /> More Info
+              <img src={info_icon} alt="" className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="hidden sm:inline">More Info</span>
+              <span className="sm:hidden">Info</span>
             </button>
           </div>
           <TitleCards />
         </div>
       </div>
-      <div className="more-cards pl-[6%]">
+      <div className="more-cards px-[4%] sm:pl-[6%]">
         <TitleCards
           title={"Blockbuster Movies"}
           category={"Blockbuster Movies"}

@@ -36,11 +36,11 @@ const Player = () => {
   }, [imdbID]);
 
   return (
-    <div className="player text-white h-screen flex flex-col justify-center items-center">
+    <div className="player text-white min-h-screen flex flex-col justify-center items-center p-4 sm:p-0 bg-black">
       <img
         src={back_arrow_icon}
         alt=""
-        className="absolute top-[20px] left-[20px] w-[50px] cursor-pointer"
+        className="absolute top-[10px] sm:top-[20px] left-[10px] sm:left-[20px] w-[35px] sm:w-[50px] cursor-pointer hover:opacity-70 transition-opacity z-10"
         onClick={() => {
           window.history.back();
         }}
@@ -53,15 +53,23 @@ const Player = () => {
           title={videoTitle + " trailer"}
           frameBorder="0"
           allowFullScreen
-          className="rounded-[10px]"
+          className="rounded-[10px] aspect-video max-w-[1200px] w-full h-auto min-h-[300px] sm:min-h-[400px] md:min-h-[500px]"
         ></iframe>
       ) : (
-        <p className="text-gray-400 text-4xl font-bold">Loading Trailer...</p>
+        <p className="text-gray-400 text-2xl sm:text-4xl font-bold text-center px-4">
+          Loading Trailer...
+        </p>
       )}
-      <div className="player-info flex items-center justify-between w-[90%] mt-4">
-        <p>{data ? data.Released : "Loading Published date..."}</p>
-        <p>{videoTitle ? videoTitle : "Loading Name..."}</p>
-        <p>{data ? data.Genre : "Loading Genre..."}</p>
+      <div className="player-info flex flex-col sm:flex-row items-center justify-between w-[90%] max-w-[1200px] mt-4 gap-2 sm:gap-4 text-center sm:text-left">
+        <p className="text-sm sm:text-base">
+          {data ? data.Released : "Loading Published date..."}
+        </p>
+        <p className="text-sm sm:text-base font-semibold">
+          {videoTitle ? videoTitle : "Loading Name..."}
+        </p>
+        <p className="text-sm sm:text-base">
+          {data ? data.Genre : "Loading Genre..."}
+        </p>
       </div>
     </div>
   );

@@ -20,39 +20,42 @@ const Footer = () => {
     "Contact Us",
   ];
   return (
-    <div className="footer py-[30px] px-[4%] max-w-[1000px] mx-auto my-auto">
-      <div className="footerIcons flex gap-[20px] mx-0 my-[40px]">
+    <div className="footer py-[30px] px-[4%] sm:px-[6%] max-w-[1000px] mx-auto my-auto">
+      <div className="footerIcons flex gap-[15px] sm:gap-[20px] mx-0 my-[30px] sm:my-[40px]">
         <img
           src={facebook_icon}
           alt="Not Found"
-          className="w-[30px] cursor-pointer"
+          className="w-[25px] sm:w-[30px] cursor-pointer hover:opacity-70 transition-opacity"
         />
         <img
           src={instagram_icon}
           alt="Not Found"
-          className="w-[30px] cursor-pointer"
+          className="w-[25px] sm:w-[30px] cursor-pointer hover:opacity-70 transition-opacity"
         />
         <img
           src={twitter_icon}
           alt="Not Found"
-          className="w-[30px] cursor-pointer"
+          className="w-[25px] sm:w-[30px] cursor-pointer hover:opacity-70 transition-opacity"
         />
         <img
           src={youtube_icon}
           alt="Not Found"
-          className="w-[30px] cursor-pointer"
+          className="w-[25px] sm:w-[30px] cursor-pointer hover:opacity-70 transition-opacity"
         />
       </div>
-      <ul className="grid grid-cols-4 gap-[15px] mb-[30px] ">
+      <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-[10px] sm:gap-[15px] mb-[20px] sm:mb-[30px]">
         {list_items.map((item, index) => {
           return (
-            <li key={index} className="text-white">
+            <li
+              key={index}
+              className="text-white text-[12px] sm:text-[14px] cursor-pointer hover:underline"
+            >
               {item}
             </li>
           );
         })}
       </ul>
-      <p className="copyRightText text-gray-400 text-[14px] ">
+      <p className="copyRightText text-gray-400 text-[12px] sm:text-[14px]">
         © 1997–2025 Netflix, Inc. All rights reserved.
       </p>
     </div>
