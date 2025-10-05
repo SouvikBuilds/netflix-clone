@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@import "@fontsource/poppins";
+@import "@fontsource/poppins/400.css";
+@import "@fontsource/poppins/400-italic.css";
+
+* {
+  font-family: "Poppins";
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
