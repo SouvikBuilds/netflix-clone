@@ -6,8 +6,10 @@ import play_icon from "../../assets/play_icon.png";
 import info_icon from "../../assets/info_icon.png";
 import TitleCards from "../../components/TitleCards/TitleCards.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className="home">
       <Navbar />
@@ -33,6 +35,7 @@ const Home = () => {
             <button
               type="button"
               className="flex items-center justify-center gap-1 sm:gap-2 px-4 sm:px-8 py-2 sm:py-3 bg-white text-black text-[14px] sm:text-base font-semibold rounded-lg hover:bg-[#ffffffbf] transition-all duration-200 cursor-pointer h-[36px] sm:h-[40px]"
+              onClick={() => navigate("/player/tt0427954")}
             >
               <img src={play_icon} alt="" className="w-4 h-4 sm:w-5 sm:h-5" />
               Play
